@@ -6,6 +6,7 @@
 - run app: `go run cmd/server/main.go`
 - make docker image: `docker build go-rest-api .`
 - run docker image: `docker run go-rest-api`
+- run docker compose: "docker-compose up"
 
 ## Reference
 
