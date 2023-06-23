@@ -2,7 +2,12 @@ package comment
 
 import (
 	"context"
+	"errors"
 	"fmt"
+)
+
+var (
+	ErrFetchingComment = errors.New("failed to fetch comment by id")
 )
 
 // Comment - a representation of the comment structure for our service
@@ -35,7 +40,7 @@ func (s *Service) GetComment(ctx context.Context, id string) (Comment, error) {
 	cmt, err := s.Store.GetComment(ctx, id)
 	if err != nil {
 		fmt.Println(err)
-		return Comment{}, err
+		return Comment{}, ErrFetchingComment
 	}
 
 	return cmt, nil
