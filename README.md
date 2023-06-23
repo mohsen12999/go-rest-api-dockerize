@@ -2,7 +2,8 @@
 
 ## Commands
 
-- go mod init github.com/mohsen12999/go-rest-api
+- make project: `go mod init github.com/mohsen12999/go-rest-api`
+- run app: `go run cmd/server/main.go`
 
 ## Reference
 
