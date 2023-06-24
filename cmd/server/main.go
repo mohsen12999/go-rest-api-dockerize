@@ -21,6 +21,8 @@ func Run() error {
 		return err
 	}
 
+	fmt.Println("successfully connect and pinged database")
+
 	return nil
 }
 
